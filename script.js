@@ -11,17 +11,24 @@ const btn18 = document.querySelector(".eighteen>button");
 const btn19 = document.querySelector(".nineteen>button");
 const result = document.querySelector(".result");
 
-btn17.onclick = function() {
-    alert("Try again");
-    result.textContent = "NO"
-}
+btn17.addEventListener("click", function() {
+    isTrueAge(this.textContent);
+});
 
-btn18.onclick = function() {
-    alert("Right!");
-    result.textContent = "YES"
-}
+btn18.addEventListener("click", function() {
+    isTrueAge(this.textContent);
+});
 
-btn19.onclick = function() {
-    alert("Try again");
-    result.textContent = "NO"
-}
+btn19.addEventListener("click", function() {
+    isTrueAge(this.textContent);
+});
+
+function isTrueAge(age) {
+    if (age == 18) {
+        alert("Right!");
+        result.textContent = "Yes";
+    } else {
+        alert("Try again");
+        result.textContent = "NO";
+    };
+};
